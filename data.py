@@ -22,6 +22,8 @@ plt.bar(data["class"].unique(), data["class"].value_counts())
 plt.title("Distribution of Classes")
 #plt.show()
 
+# Apply commands slow things down!!!!
+
 data_no_punc = data.copy()
 data_no_punc["text"] = data_no_punc["text"].str.replace(r'[^\w\s]', '', regex=True)
 
